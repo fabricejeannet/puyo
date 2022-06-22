@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/img/puyos.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Couple.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Puyo.gd" type="Script" id=3]
+
+[node name="Couple" type="Node2D"]
+position = Vector2( 32, 0 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+
+[node name="Puyo1" type="KinematicBody2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Puyo1"]
+texture = ExtResource( 1 )
+hframes = 18
+vframes = 4
+
+[node name="Puyo2" type="KinematicBody2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Puyo2"]
+texture = ExtResource( 1 )
+hframes = 18
+vframes = 4
+frame = 18
